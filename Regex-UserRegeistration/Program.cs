@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wellcome to Regex Program");
+            Console.WriteLine("Wellcome to Regex Program\n");
+
+            User user = new User();
+            user.FirstName();
         }
     }
 }
