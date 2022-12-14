@@ -10,6 +10,7 @@
             user.FirstName();
             user.LastName();
             user.Email();
+            user.MobileNumber();
         }
     }
 }

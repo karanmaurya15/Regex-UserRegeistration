@@ -46,8 +46,22 @@ namespace Regex_UserRegeistration
                 Console.WriteLine("{0} is valid", email);
             }
             else
-                Console.WriteLine("{0} is invalid. ", email);
-
+                Console.WriteLine("{0} is invalid. Enter email in given form ", email);
+        }
+        public void MobileNumber()
+        {
+            Console.Write("\nEnter Mobile Number in form of +(country code) (10 digit number): ");
+            string mobileNumber = Console.ReadLine();
+            var regex = new Regex(@"^[+][1-9]{1}[0-9]{0,2}\s[1-9]{1}[0-9]{9}");
+            bool match = regex.IsMatch(mobileNumber);
+            if (match == true)
+            {
+                Console.WriteLine("{0} is valid", mobileNumber);
+            }
+            else
+            {
+                Console.WriteLine("{0} is invalid", mobileNumber);
+            }
         }
     }
 }
