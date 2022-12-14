@@ -9,6 +9,7 @@
             User user = new User();
             user.FirstName();
             user.LastName();
+            user.Email();
         }
     }
 }
