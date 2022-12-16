@@ -65,9 +65,9 @@ namespace Regex_UserRegeistration
         }
         public void Password()
         {
-            Console.Write("\nEnter a Password (atleast 1 capital ltter) : ");
+            Console.Write("\nEnter a Password (atleast 1 capital ltter and 1 number ) : ");
             string password = Console.ReadLine();
-            var regex = new Regex(@"(?=.*[a-z])(?=.*[A-Z]).{8,}$");
+            var regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$");
             bool match = regex.IsMatch(password);
             if (match == true)
             {
@@ -75,7 +75,7 @@ namespace Regex_UserRegeistration
             }
             else
             {
-                Console.WriteLine("{0} is invalid. Must contain atleast 8 characters.", password);
+                Console.WriteLine("{0} is invalid.", password);
             }
         }
     }
