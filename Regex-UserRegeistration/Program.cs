@@ -11,6 +11,7 @@
             user.LastName();
             user.Email();
             user.MobileNumber();
+            user.Password();
         }
     }
 }

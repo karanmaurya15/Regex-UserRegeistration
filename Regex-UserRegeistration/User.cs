@@ -63,5 +63,20 @@ namespace Regex_UserRegeistration
                 Console.WriteLine("{0} is invalid", mobileNumber);
             }
         }
+        public void Password()
+        {
+            Console.Write("\nEnter a Password (minimum 8 character) : ");
+            string password = Console.ReadLine();
+            var regex = new Regex(@"^[A-Za-z0-9]{8,}");
+            bool match = regex.IsMatch(password);
+            if (match == true)
+            {
+                Console.WriteLine("{0} is valid", password);
+            }
+            else
+            {
+                Console.WriteLine("{0} is invalid. Must contain atleast 8 characters.", password);
+            }
+        }
     }
 }
