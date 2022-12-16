@@ -65,9 +65,9 @@ namespace Regex_UserRegeistration
         }
         public void Password()
         {
-            Console.Write("\nEnter a Password (minimum 8 character) : ");
+            Console.Write("\nEnter a Password (atleast 1 capital ltter) : ");
             string password = Console.ReadLine();
-            var regex = new Regex(@"^[A-Za-z0-9]{8,}");
+            var regex = new Regex(@"(?=.*[a-z])(?=.*[A-Z]).{8,}$");
             bool match = regex.IsMatch(password);
             if (match == true)
             {
