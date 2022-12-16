@@ -12,6 +12,7 @@
             user.Email();
             user.MobileNumber();
             user.Password();
+            user.SampleEmail();
         }
     }
 }

@@ -78,5 +78,20 @@ namespace Regex_UserRegeistration
                 Console.WriteLine("{0} is invalid.", password);
             }
         }
+        public void SampleEmail()
+        {
+            Console.Write("Enter Email Id Given in Chart : ");
+            string email = Console.ReadLine();
+            Regex regex = new Regex(@"^(abc)([_\+\-\.]{0,1}[a-zA-Z0-9])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.\,]{0,}[a-z]{0,}$");
+            bool matches = regex.IsMatch(email);
+            if (matches == true)
+            {
+                Console.WriteLine("{0} is Valid Email ID", email);
+            }
+            else
+            {
+                Console.WriteLine("Please Enter Valid Email ID {0}", email);
+            }
+        }
     }
 }
